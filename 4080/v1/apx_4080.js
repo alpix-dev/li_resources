@@ -1,7 +1,7 @@
 apx_widgets.worker.testimonials = {};
 apx_widgets.worker.testimonials.list = [];
 //apx_widgets.worker.testimonials.list.push({name : "Mariana",rating: 5, description: "Estou usando a calça desde que chegou e estou muito satisfeito com o produto. Está exatamente como nas fotos, se encaixa perfeitamente, é muito confortável e de boa qualidade. Recomendo a compra sem problemas.", img:"http://127.0.0.1:5500/400x400.png"});
-apx_widgets.worker.testimonials.config = {title:"O que dizem por ai", ratingColor: "#f9d141", nameColor: "#000", descriptionColor:"#666", slidesDesktop: 3, slidesMobile: 1, target: "#blank-home-position3"};
+apx_widgets.worker.testimonials.config = {title:"O que dizem por ai", ratingColor: "#f9d141", nameColor: "#000", descriptionColor:"#666", target: "#blank-home-position3", sliderSettings:{type: 'carousel', gap:20, autoplay: 4000, perView: 3, breakpoints:{800:{perView: 1}}}, sliderArrows: '<div class="glide__arrows" data-glide-el="controls"> <button class="glide__arrow glide__arrow--prev" data-glide-dir="<">prev</button> <button class="glide__arrow glide__arrow--next" data-glide-dir=">">next</button> </div>'};
 apx_widgets.worker.testimonials.style = "<style>/* TESTIMONIALS */.apx_widgets_worker-testimonials{-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}.apx_widgets_worker-testimonials .glide{margin: 2rem 0 5rem 0;}.apx_widgets_worker-testimonials > ul{margin:0;}.apx_widgets_worker-testimonials ul > li{}.apx_widgets_worker-testimonials ul > li > div{text-align: left; display: flex; gap: 15px; align-items: flex-start; background: #f8f8f8; padding: 15px;}.apx_widgets_worker-testimonials ul > li > div strong{font-size: 14px; display: block; margin: 0px 0 10px 0;}.apx_widgets_worker-testimonials ul > li > div p{white-space: pre-wrap; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}.apx_widgets_worker-testimonials ul > li > div i{font-size:18px;margin:5px 3px 0 0;}.apx_widgets_worker-testimonials ul > li > div > img{max-width:100%; width:100px; display: block;}</style>";
 apx_widgets.worker.testimonials.match = $('.pagina-inicial').length > 0;
 apx_widgets.worker.testimonials.run = function(el){
@@ -29,17 +29,11 @@ apx_widgets.worker.testimonials.run = function(el){
     $('.apx_widgets_worker-testimonials .glide__slides').wrap('<div class="glide__track" data-glide-el="track"></div>');
     $('.apx_widgets_worker-testimonials .glide__track').wrap('<div class="glide" data-wait-mutation="false" data-autoplay="4000" data-per-view="'+ apx_widgets.worker.testimonials.config.slidesDesktop +'" data-per-view-sm="'+ apx_widgets.worker.testimonials.config.slidesMobile +'" ></div>');
     
-    new Glide('.apx_widgets_worker-testimonials .glide', {            
-        type: 'carousel',
-        gap:20,
-        autoplay: 4000,
-        perView: apx_widgets.worker.testimonials.config.slidesDesktop,
-        breakpoints: {
-            800: {
-                perView: apx_widgets.worker.testimonials.config.slidesMobile
-            }
-        }        
-    }).mount();
+    if(apx_widgets.worker.testimonials.config.sliderArrows !== ""){
+        $('.apx_widgets_worker-testimonials .glide__track').append(apx_widgets.worker.testimonials.config.sliderArrows);
+    }
+    
+    new Glide('.apx_widgets_worker-testimonials .glide', apx_widgets.worker.testimonials.config.sliderSettings).mount();
     
     console.log('apx_widgets.worker.testimonials OK');
 };
