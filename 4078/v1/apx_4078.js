@@ -5,7 +5,7 @@ apx_widgets.worker.floatingWhatsapp.style = "<style>/* FLOATING WHATSAPP */ .apx
 apx_widgets.worker.floatingWhatsapp.match = $('.pagina-inicial').length > 0;
 apx_widgets.worker.floatingWhatsapp.run = function(el){
     var apx_widgetsFloatingWhatsapp = $('<div class="apx_widgets_worker-floatingWhatsapp"></div>');    
-    apx_widgetsFloatingWhatsapp.append('<a target="_blank" href="http://wa.me/'+ apx_widgets.worker.floatingWhatsapp.config.number+'"/><span style="color:'+ apx_widgets.worker.floatingWhatsapp.config.textColor +';background-color:'+ apx_widgets.worker.floatingWhatsapp.config.textBackground +';">'+ apx_widgets.worker.floatingWhatsapp.config.text +'</span>'+ apx_widgets.worker.floatingWhatsapp.config.icon +'</a>');    
+    apx_widgetsFloatingWhatsapp.append('<a target="_blank" href="http://wa.me/'+ apx_widgets.worker.floatingWhatsapp.config.number+'"><span style="color:'+ apx_widgets.worker.floatingWhatsapp.config.textColor +';background-color:'+ apx_widgets.worker.floatingWhatsapp.config.textBackground +';">'+ apx_widgets.worker.floatingWhatsapp.config.text +'</span>'+ apx_widgets.worker.floatingWhatsapp.config.icon +'</a>');    
     apx_widgetsFloatingWhatsapp.appendTo(apx_widgets.worker.floatingWhatsapp.config.target);
     console.log('apx_widgets.worker.floatingWhatsapp OK');
 };
