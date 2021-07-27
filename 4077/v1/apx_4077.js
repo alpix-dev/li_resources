@@ -11,6 +11,9 @@ apx_widgets.worker.sizeTable.run = function(el){
     if(themeSizeTable.length == 0){
         themeSizeTable = apx_widgets.worker.sizeTable.list.filter( el => el.identifier == sizeTableBrand);
     }
+    if(themeSizeTable.length == 0){
+        themeSizeTable = apx_widgets.worker.sizeTable.list.filter( el => el.identifier == "x");
+    }
 
     if(themeSizeTable.length > 0){
         $(apx_widgets.worker.sizeTable.config.target).parent().after("<a href='"+ themeSizeTable[0].src +"' class='apx_widgets_worker-sizeTable' style='"+ (apx_widgets.worker.sizeTable.config.textColor != undefined ? "color:" +  apx_widgets.worker.sizeTable.config.textColor + ";" : "") + " " + (apx_widgets.worker.sizeTable.config.backgroundColor != undefined ? "background-color:" +  apx_widgets.worker.sizeTable.config.backgroundColor + ";" : "") + "'>"+ apx_widgets.worker.sizeTable.config.icon + "" + apx_widgets.worker.sizeTable.config.text +"</a>");
