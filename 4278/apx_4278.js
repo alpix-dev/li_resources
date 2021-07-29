@@ -1,7 +1,6 @@
 apx_widgets.worker.variantWithImage = {};
 apx_widgets.worker.variantWithImage.list = [{}];
 apx_widgets.worker.variantWithImage.config = {};
-apx_widgets.worker.variantWithImage.style = '<style>/* VARIANT WITH IMAGE */ .apx_widgets_worker-variantWithImage{}</style>';
 apx_widgets.worker.variantWithImage.match = ($('.pagina-produto').length > 0 && $('.atributo-cor').length > 0);
 apx_widgets.worker.variantWithImage.run = function(el){
     $(".atributo-cor .atributo-item").each((function() {
