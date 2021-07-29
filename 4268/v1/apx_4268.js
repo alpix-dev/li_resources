@@ -11,7 +11,7 @@ apx_widgets.worker.pixPaymentMethod.run = function(el){
         }        
     });
     if($('.gateways-rodape').length > 0){
-        $('.gateways-rodape').prepend('<li class="apx_widgets_worker-pixPaymentMethod-footer">' + apx_widgets.worker.pixPaymentMethod.config.icon + '</li>');
+        $('.gateways-rodape').prepend('<li class="apx_widgets_worker-pixPaymentMethod">' + apx_widgets.worker.pixPaymentMethod.config.icon + '</li>');
         $('.gateways-rodape').css('display','flex');
         $('.gateways-rodape > li').css('border-left','0px');
         console.log('apx_widgets.worker.pixPaymentMethod-footer OK');
