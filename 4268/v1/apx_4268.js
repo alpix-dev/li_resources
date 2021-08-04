@@ -7,13 +7,15 @@ apx_widgets.worker.pixPaymentMethod.match = $('.pagina-carrinho.carrinho-checkou
 apx_widgets.worker.pixPaymentMethod.run = function(el){
     $.each(apx_widgets.worker.pixPaymentMethod.list, function(i,k){
         if($(k.target).length > 0){
-            $(k.target).after('<div class="apx_widgets_worker-pixPaymentMethod">' + apx_widgets.worker.pixPaymentMethod.config.icon + '</div>');
+            $(k.target).after('<div class="apx_widgets_worker-pixPaymentMethod" >' + apx_widgets.worker.pixPaymentMethod.config.icon + '</div>');
         }        
     });
     if($('.gateways-rodape').length > 0){
-        $('.gateways-rodape').prepend('<li class="apx_widgets_worker-pixPaymentMethod">' + apx_widgets.worker.pixPaymentMethod.config.icon + '</li>');
+        $('.gateways-rodape').prepend('<li class="apx_widgets_worker-pixPaymentMethod" style="margin-left:0">' + apx_widgets.worker.pixPaymentMethod.config.icon + '</li>');
         $('.gateways-rodape').css('display','flex');
-        $('.gateways-rodape > li').css('border-left','0px');
+        $('.gateways-rodape').css('width','fit-content');
+        $('.gateways-rodape > li').css('border','0px');
+        $('.gateways-rodape > li').css('padding','10px 10px');
         console.log('apx_widgets.worker.pixPaymentMethod-footer OK');
     }
     console.log('apx_widgets.worker.pixPaymentMethod OK');
