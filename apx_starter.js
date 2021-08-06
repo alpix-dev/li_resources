@@ -38,5 +38,6 @@ apx_widgets.worker.run = function(){
 document.addEventListener("DOMContentLoaded", function() {
     $(function() {
         apx_widgets.worker.run();
+        $('[alt="Logomarca Loja Integrada"]').closest('a').attr('href','https://app.lojaintegrada.com.br/public/assinar?utm_source=partners&utm_campaign=399');
     });
 }, false);
