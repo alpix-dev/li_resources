@@ -7,7 +7,7 @@ apx_widgets.worker.variantWithImage.run = function(el){
         let option = produto_grades_imagens[$(this).data("variacao-id")];
         if(option !== undefined){
             $(this).append('<img src="'+ $('[data-imagem-id="' + option + '"]').find('img').attr("src") +'"/>').find('span').remove();
-
+            $(this).addClass('with-image');
         }
     }));
     console.log('apx_widgets.worker.variantWithImage OK');

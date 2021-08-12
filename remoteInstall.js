@@ -23,8 +23,8 @@ let script2 = document.createElement('script');
 script2.src = "http://127.0.0.1:5500/4268/v2/apx_4268.js"
 document.head.append(script2);
 script2.onload = function() {
-    apx_widgets.worker.pixPaymentMethod.list.push({target : "#pagamento26 .forma-conteiner > img"});
-    apx_widgets.worker.pixPaymentMethod.list.push({target : ".pagina-produto .principal img[src^='https://cdn.awsli.com.br/production/static/img/formas-de-pagamento/pagsegurov2-logo.png']"});
+    apx_widgets.worker.pixPaymentMethod.list.push({target : "#pagamento6 .forma-conteiner > img"});
+    apx_widgets.worker.pixPaymentMethod.list.push({target : ".pagina-produto .principal img[src^='https://cdn.awsli.com.br/production/static/img/formas-de-pagamento/boleto-logo.png']"});
     apx_widgets.worker.pixPaymentMethod.list.push({target : ".gateways-rodape"});
     apx_widgets.worker.run();
     console.log('script loaded');        
