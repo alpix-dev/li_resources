@@ -39,5 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     $(function() {
         apx_widgets.worker.run();
         $('[alt="Logomarca Loja Integrada"]').closest('a').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
+        $('a[title="Loja Integrada"]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
+        $('a[title="Loja Integrada - Plataforma de loja virtual."]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
     });
 }, false);
