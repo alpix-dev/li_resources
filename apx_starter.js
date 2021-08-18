@@ -38,8 +38,15 @@ apx_widgets.worker.run = function(){
 document.addEventListener("DOMContentLoaded", function() {
     $(function() {
         apx_widgets.worker.run();
-        $('[alt="Logomarca Loja Integrada"]').closest('a').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
-        $('a[title="Loja Integrada"]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
-        $('a[title="Loja Integrada - Plataforma de loja virtual."]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
+        apx_related();
     });
 }, false);
+window.addEventListener('load', function(event) {
+    apx_related();
+});
+
+function apx_related(){
+    $('[alt="Logomarca Loja Integrada"]').closest('a').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
+    $('a[title="Loja Integrada"]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
+    $('a[title="Loja Integrada - Plataforma de loja virtual."]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');        
+}
