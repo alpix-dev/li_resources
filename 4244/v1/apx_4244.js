@@ -6,9 +6,9 @@ apx_widgets.worker.offerTimer.style = "<style>/*OFFER TIMER*/.apx_widgets_worker
 apx_widgets.worker.offerTimer.match = $('.acoes-produto').length > 0;
 apx_widgets.worker.offerTimer.run = function(el){
     $.each(apx_widgets.worker.offerTimer.list, function(k,item){
-        if($('.listagem-item .produto-sku:contains('+ item.sku +')').length > 0){
-            const me = $('.listagem-item .produto-sku:contains('+ item.sku +')');
-            let productSku = me.find('.produto-sku').text();
+        if($('.listagem-item .produto-sku:contains('+ item.sku.trim() +')').length > 0){
+            const me = $('.listagem-item .produto-sku:contains('+ item.sku.trim() +')').closest('.listagem-item');
+            let productSku = item.sku.trim();
             let findOffer = apx_widgets.worker.offerTimer.list.find(el => el.sku.toLowerCase().trim() === productSku.toLowerCase().trim());
             if(findOffer){
                 me.find(apx_widgets.worker.offerTimer.config.targetList).prepend(apx_widgets.worker.offerTimer.config.layout.replace('[text]',findOffer.text).replace('[date]',findOffer.date));
