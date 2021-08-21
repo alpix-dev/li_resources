@@ -1,7 +1,7 @@
 apx_widgets.worker.stripe = {};
 apx_widgets.worker.stripe.list = [];
-apx_widgets.worker.stripe.list.push({text : "5% OFF Somente hoje usando o cupom <b><u>ALPIX</u></b>",backgroundColor: '#000',textColor: '#fff',fontSize:"11px",padding: "10px", link: "/", img:""});
-apx_widgets.worker.stripe.list.push({text : "Está chegando o <b><u>GRANDE ESQUENTA DA BLACK FRIDAY</u></b>",backgroundColor: '#CCC',textColor: '#666',fontSize:"11px",padding: "10px", link: "/", img:""});
+// apx_widgets.worker.stripe.list.push({text : "5% OFF Somente hoje usando o cupom <b><u>ALPIX</u></b>",backgroundColor: '#000',textColor: '#fff',fontSize:"11px",padding: "10px", link: "/", img:""});
+// apx_widgets.worker.stripe.list.push({text : "Está chegando o <b><u>GRANDE ESQUENTA DA BLACK FRIDAY</u></b>",backgroundColor: '#CCC',textColor: '#666',fontSize:"11px",padding: "10px", link: "/", img:""});
 apx_widgets.worker.stripe.config = {place: function(oObj){oObj.prependTo('body')} };
 apx_widgets.worker.stripe.style = '<style></style>';
 apx_widgets.worker.stripe.match = $('.pagina-carrinho').length < 1;
