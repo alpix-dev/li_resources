@@ -3,7 +3,7 @@ apx_widgets.worker.quantityRange.list = [];
 apx_widgets.worker.quantityRange.config = {};
 apx_widgets.worker.quantityRange.style = '<style>.apx_avisoQtd{font-size: 11px;margin: -15px auto 5px auto;background: #f9d13c;width: fit-content;padding: 0 3px;border-radius: 3px;color: #000;}</style>';
 apx_widgets.worker.quantityRange.match = $('.pagina-carrinho:not(.carrinho-checkout)').length > 0;
-apx_widgets.worker.quantityRange.list.push({sku : "FGGYJHTL2",min: 3, max: 5});
+//apx_widgets.worker.quantityRange.list.push({sku : "FGGYJHTL2",min: 3, max: 5});
 apx_widgets.worker.quantityRange.run = function(el){
     $('tr[data-produto-id]').each(function(){
         console.log('ihu')
