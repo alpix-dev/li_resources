@@ -19,6 +19,21 @@ apx_widgets.scripts.Glide = function(){
     }
 };
 
+// apx_widgets.functions.findProduct = function(query){
+//     $.ajax({
+//         url: API_PRODUCT_URL + '/autocomplete/' + LOJA_ID,
+//         dataType: 'json',
+//         data: {
+//             q: query,
+//             size: 1,
+//             ttl: 300
+//         },
+//         success: function(data){
+//             return data
+//         }
+//     });
+// }
+
 apx_widgets.worker = {};
 apx_widgets.worker.run = function(){
     $(window).load(function(){
