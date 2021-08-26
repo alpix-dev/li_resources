@@ -7,6 +7,11 @@ apx_widgets.worker.pixPaymentMethod.match = $('.pagina-carrinho.carrinho-checkou
 apx_widgets.worker.pixPaymentMethod.run = function(el){
     $.each(apx_widgets.worker.pixPaymentMethod.list, function(i,k){
         if($(k.target).length > 0){
+            if($(k.target).closest('.li-box-payment').length > 0){
+                if($(k.target).length > 1){
+                    $(k.target).closest('.li-box-payment').find('.forma-container > img:last-child').remove();
+                }
+            }
             $(k.target).after('<div class="apx_widgets_worker-pixPaymentMethod" >' + apx_widgets.worker.pixPaymentMethod.config.icon + '</div>');
         }        
     });

@@ -49,7 +49,7 @@ apx_widgets.worker.offerTimer.run = function(el){
                 var dateString = findOffer.date;
                 var dateParts = dateString.split("/");
                 var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
-                console.log(dateObject);
+                //console.log(dateObject);
                 let countDownDate = new Date(dateObject);
                 countDownDate.setDate(countDownDate.getDate() + 1);
                         
