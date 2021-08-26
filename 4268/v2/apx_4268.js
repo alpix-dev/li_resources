@@ -9,7 +9,7 @@ apx_widgets.worker.pixPaymentMethod.run = function(el){
         if($(k.target).length > 0){
             if($(k.target).closest('.li-box-payment').length > 0){
                 if($(k.target).length > 1){
-                    $(k.target).closest('.li-box-payment').find('.forma-container > img:last-child').remove();
+                    $(k.target).closest('.li-box-payment').find('.forma-conteiner > img:nth-child(3)').remove();
                 }
             }
             $(k.target).after('<div class="apx_widgets_worker-pixPaymentMethod" >' + apx_widgets.worker.pixPaymentMethod.config.icon + '</div>');
