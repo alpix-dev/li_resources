@@ -19,23 +19,14 @@ apx_widgets.scripts.Glide = function(){
     }
 };
 
-// apx_widgets.functions.findProduct = function(query){
-//     $.ajax({
-//         url: API_PRODUCT_URL + '/autocomplete/' + LOJA_ID,
-//         dataType: 'json',
-//         data: {
-//             q: query,
-//             size: 1,
-//             ttl: 300
-//         },
-//         success: function(data){
-//             return data
-//         }
-//     });
-// }
-
 apx_widgets.worker = {};
 apx_widgets.worker.run = function(){
+    let style = document.createElement('link');
+    style.href = "cdn.jsdelivr.net/gh/alpix-dev/li_resources/apx_starter.css";
+    style.type = "text/css";
+    style.rel = "stylesheet";
+    document.head.append(style);
+    
     $(window).load(function(){
         $.each(apx_widgets.worker, function(k, item){
             if(k != "run"){
@@ -48,6 +39,14 @@ apx_widgets.worker.run = function(){
             }        
         })
     });
+};
+
+apx_widgets.functions.blockPage = function (status){
+    if(status){
+        $('body').append('<div id="apx_loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>');
+    }else{
+        $('#apx_loader').remove();
+    }   
 };
 
 document.addEventListener("DOMContentLoaded", function() {
