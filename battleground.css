@@ -52,10 +52,8 @@
 .apx_widgets_worker-buyTogether-item-options .indisponivel .icon-remove.hide{display:block!important;}
 
 @media(max-width:990px){
-.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div span{font-size:11px;}
-.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div span {
-    border-width: 0px 0px 20px 20px;
-}
-.apx_widgets_worker-buyTogether .atributos div ul li{margin:0 10px 10px 0;}
-/* .apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div span > b{font-size:12px;} */
+    .apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div span{font-size:11px;}
+    .apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div span {
+        border-width: 0px 0px 20px 20px;
+    }
 }
