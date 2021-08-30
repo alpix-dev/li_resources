@@ -15,7 +15,6 @@ apx_widgets.worker.offerTimer.run = function(el){
                 var dateString = findOffer.date;
                 var dateParts = dateString.split("/");
                 var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
-                console.log(dateObject);
                 let countDownDate = new Date(dateObject);
                 countDownDate.setDate(countDownDate.getDate() + 1);
                         
@@ -74,73 +73,5 @@ apx_widgets.worker.offerTimer.run = function(el){
             } 
         }
     });
-    // $('.listagem-item').each(function(){        
-    //     const me = $(this);
-    //     let productSku = $(this).find('.produto-sku').text();
-    //     let findOffer = apx_widgets.worker.offerTimer.list.find(el => el.sku.toLowerCase().trim() === productSku.toLowerCase().trim());
-    //     if(findOffer){
-    //         $(this).find(apx_widgets.worker.offerTimer.config.targetList).prepend(apx_widgets.worker.offerTimer.config.layout.replace('[text]',findOffer.text).replace('[date]',findOffer.date));
-    //         var dateString = findOffer.date;
-    //         var dateParts = dateString.split("/");
-    //         var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
-    //         console.log(dateObject);
-    //         let countDownDate = new Date(dateObject);
-    //         countDownDate.setDate(countDownDate.getDate() + 1);
-                    
-    //         var x = setInterval(function() {
-    //             if(me.find('.apx_widgets_worker-offerTimer').length > 0){
-    //                 var now = new Date().getTime();            
-    //                 var distance = countDownDate - now;            
-    //                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days*24);
-    //                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    
-    //                 me.find('.apx_widgets_worker-offerTimer .h').text(hours.toString().length == 1 ? "0" + hours.toString() : hours);
-    //                 me.find('.apx_widgets_worker-offerTimer .m').text(minutes.toString().length == 1 ? "0" + minutes.toString() : minutes);
-    //                 me.find('.apx_widgets_worker-offerTimer .s').text(seconds.toString().length == 1 ? "0" + seconds.toString() : seconds);
-
-    //                 if (distance < 1) {
-    //                     me.find('.apx_widgets_worker-offerTimer').remove();
-    //                 }
-    //             }
-    //         }, 1000);
-    //     }        
-    // });   
-    
-    // $('.pagina-produto .principal .acoes-produto.disponivel').each(function(){
-    //     const me = $(this);
-    //     let productSku = $(this).attr('class').replace('acoes-produto','').replace('disponivel','').replace('SKU-','').trim().toLowerCase();
-    //     let findOffer = apx_widgets.worker.offerTimer.list.find(el => el.sku.toLowerCase().trim() === productSku.toLowerCase().trim());
-    //     if(findOffer){
-    //         $(apx_widgets.worker.offerTimer.config.layout.replace('[text]',findOffer.text).replace('[date]',findOffer.date)).insertBefore($(this).find(apx_widgets.worker.offerTimer.config.targetProductPage));
-    //         var dateString = findOffer.date;
-    //         var dateParts = dateString.split("/");
-    //         var dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]); 
-    //         console.log(dateObject);
-    //         let countDownDate = new Date(dateObject);
-    //         countDownDate.setDate(countDownDate.getDate() + 1);
-                    
-    //         var x = setInterval(function() {
-    //             if(me.find('.apx_widgets_worker-offerTimer').length > 0){
-    //                 var now = new Date().getTime();            
-    //                 var distance = countDownDate - now;            
-    //                 var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //                 var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + (days*24);
-    //                 var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //                 var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                    
-    //                 me.find('.apx_widgets_worker-offerTimer .h').text(hours.toString().length == 1 ? "0" + hours.toString() : hours);
-    //                 me.find('.apx_widgets_worker-offerTimer .m').text(minutes.toString().length == 1 ? "0" + minutes.toString() : minutes);
-    //                 me.find('.apx_widgets_worker-offerTimer .s').text(seconds.toString().length == 1 ? "0" + seconds.toString() : seconds);
-
-    //                 if (distance < 1) {
-    //                     me.find('.apx_widgets_worker-offerTimer').remove();
-    //                 }
-    //             }
-    //         }, 1000);
-    //     }   
-    // });
-    
     console.log('apx_widgets.worker.offerTimer OK');
 };

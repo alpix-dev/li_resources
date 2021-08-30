@@ -2,7 +2,7 @@ apx_widgets.worker.buyTogether = {};
 apx_widgets.worker.buyTogether.list = [];
 apx_widgets.worker.buyTogether.list.push({sku : "D8L4AHNAD", products : ['https://alpix-battle-ground.lojaintegrada.com.br/g100snky3-camiseta-basica-feminina','https://alpix-battle-ground.lojaintegrada.com.br/jaqueta-couro-preta','https://alpix-battle-ground.lojaintegrada.com.br/produto-grade-atacado']});
 apx_widgets.worker.buyTogether.config = {target: ".principal .acoes-produto", preload: true, title: "Aproveite e leve também", insertFunction: function(apx_widgetsbuyTogether){if(apx_widgets.worker.buyTogether.config.preload == true){apx_widgetsbuyTogether.appendTo($(apx_widgets.worker.buyTogether.config.target).first().prev('.apx_preload'));$(apx_widgets.worker.buyTogether.config.target).first().prev('.apx_preload').addClass('loaded')}else{apx_widgetsbuyTogether.insertBefore($(apx_widgets.worker.buyTogether.config.target).first())}},};
-apx_widgets.worker.buyTogether.style = "<style>/* BUY TOGETHER */ .apx_widgets_worker-buyTogether{}</style>";
+apx_widgets.worker.buyTogether.style = "<style>/* BUY TOGETHER */ .apx_widgets_worker-buyTogether{display: flex; flex-direction: column; gap: 15px; margin: 30px 0; padding: 20px!important; border: 1px solid #f2f2f2; box-shadow: 0px 0px 20px rgb(0 0 0 / 5%); border-radius: 5px;}.apx_widgets_worker-buyTogether > strong{font-size: 16px; display: block; margin-bottom:15px;}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item{display: flex; gap: 20px;}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div label{}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div select{}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div span{}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item > div img{width:60px}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item-options{display: flex; align-items: center; gap: 5px;}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item-options > span{border: 1px solid #ccc; position: relative; border-radius: 2px; line-height: 30px; padding: 0 6px; min-width: 18px; text-align: center; cursor:pointer;}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item-options > span.active{background: #000; color: #fff; border-color:#000;}.apx_widgets_worker-buyTogether .apx_widgets_worker-buyTogether-item:not(:last-child){border-bottom: 1px solid #f2f2f2; padding-bottom: 15px;}.apx-gap-vertical-10{display:flex;flex-direction: column;gap:10px;}.apx_widgets_worker-buyTogether-item-options .indisponivel{pointer-events:none!important;}.apx_widgets_worker-buyTogether-item-options .indisponivel .icon-remove.hide{display:block!important;}</style>";
 apx_widgets.worker.buyTogether.match = $('.pagina-produto').length > 0;
 apx_widgets.worker.buyTogether.run = function(el){
     let productSku = $('.principal').find('[itemprop="sku"]').text().toLowerCase().trim();
@@ -136,16 +136,6 @@ apx_widgets.functions.buyTogetherGet = function (k, query_, apx_widgetsbuyTogeth
         
     });
 };
-
-apx_widgets.functions.blockPage = function (status){
-    if(status){
-        $('body').append('<div id="apx_loader"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>');
-    }else{
-        $('#apx_loader').remove();
-    }
-   
-};
-
 
 apx_widgets.functions.buyTogetherAjax = function (i, calls, primary_product){
     
