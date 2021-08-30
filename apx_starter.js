@@ -21,11 +21,11 @@ apx_widgets.scripts.Glide = function(){
 
 apx_widgets.worker = {};
 apx_widgets.worker.run = function(){
-    let style = document.createElement('link');
-    style.href = "cdn.jsdelivr.net/gh/alpix-dev/li_resources/apx_starter.css";
-    style.type = "text/css";
-    style.rel = "stylesheet";
-    document.head.append(style);
+    let starterCSS = document.createElement('link');
+    starterCSS.href = "cdn.jsdelivr.net/gh/alpix-dev/li_resources/apx_starter.css";
+    starterCSS.type = "text/css";
+    starterCSS.rel = "stylesheet";
+    document.head.append(starterCSS);
     
     $(window).load(function(){
         $.each(apx_widgets.worker, function(k, item){
