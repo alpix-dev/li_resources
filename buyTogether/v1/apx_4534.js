@@ -17,6 +17,7 @@ apx_widgets.worker.crossSelling.run = function(el){
     }
 };
 
+
 apx_widgets.functions.crossSellingGet = function (k, query_, apx_widgetscrossSelling){
     $.get(query_[k], function(data){
         let result = $(data);
