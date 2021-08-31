@@ -9,7 +9,7 @@ apx_widgets.worker.quantityRange.run = function(el){
         let sku = $(this).find('.produto-info > ul > li:first-child > span > strong').text().trim();
         let findSku = apx_widgets.worker.quantityRange.list.find(el => el.sku.toLowerCase().trim() === sku.toLowerCase().trim());
         if(findSku){
-            let min = findSku.min !== undefined && findSku.min != "" ? findSku.min : 1;
+            let min = findSku.min !== undefined && findSku.min != "" ? findSku.min : 0;
             let max = findSku.max !== undefined && findSku.max != "" ? findSku.max : 9999;
             let input = $(this).find('[name="quantidade"]');
             let url = input.closest('form').attr('action');
