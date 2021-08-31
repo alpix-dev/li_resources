@@ -6,9 +6,7 @@ apx_widgets.worker.quantityRange.match = $('.pagina-carrinho:not(.carrinho-check
 //apx_widgets.worker.quantityRange.list.push({sku : "FGGYJHTL2",min: 3, max: 5});
 apx_widgets.worker.quantityRange.run = function(el){
     $('tr[data-produto-id]').each(function(){
-        console.log('ihu')
         let sku = $(this).find('.produto-info > ul > li:first-child > span > strong').text().trim();
-        console.log(sku);
         let findSku = apx_widgets.worker.quantityRange.list.find(el => el.sku.toLowerCase().trim() === sku.toLowerCase().trim());
         if(findSku){
             let min = findSku.min !== undefined && findSku.min != "" ? findSku.min : 1;
