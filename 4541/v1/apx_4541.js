@@ -28,7 +28,7 @@ apx_widgets.worker.checkoutUpsell.run = function(el){
         if(upsellItem.length > 1){
             $.each(upsellItem, function(k, upItem){
                 let itemId = upItem.addToCart.split('/')[5];
-                if($('tr[data-produto-id="'+itemId+'"]').length == 0 && $('a[href="'+upItem.addToCard+'"]').length == 0){
+                if($('tr[data-produto-id="'+itemId+'"]').length == 0 && $('a[href="'+upItem.addToCart+'"]').length == 0){
                     let item = $('<div class="apx_widgets_worker-checkoutUpsell-item"></div>');
                     let itemInfo = $('<div class="info"></div>');
                     upItem.image != undefined ? item.append('<img src="'+ upItem.image +'"/>') : '';
@@ -43,7 +43,7 @@ apx_widgets.worker.checkoutUpsell.run = function(el){
         }
         if(upsellItem.length == 1){
             let itemId = upsellItem[0].addToCart.split('/')[5];
-            if($('tr[data-produto-id="'+itemId+'"]').length == 0 && $('a[href="'+upsellItem[0].addToCard+'"]').length == 0){
+            if($('tr[data-produto-id="'+itemId+'"]').length == 0 && $('a[href="'+upsellItem[0].addToCart+'"]').length == 0){
                 let item = $('<div class="apx_widgets_worker-checkoutUpsell-item"></div>');
                 let itemInfo = $('<div class="info"></div>');
                 upsellItem[0].image != undefined ? item.append('<img src="'+ upsellItem[0].image +'"/>') : '';
