@@ -1,5 +1,21 @@
 apx_widgets.worker.checkoutUpsell = {};
 apx_widgets.worker.checkoutUpsell.list = [];
+apx_widgets.worker.checkoutUpsell.list.push({
+    sku : "D8L4AHNAD", 
+    title : "Aproveite e leve também nossa Calça Legging Roxa!",
+    subtitle : "De R$230 por apenas R$190.",
+    confirmation : "Garantir Oferta!",
+    addToCart: "https://alpix-battle-ground.lojaintegrada.com.br/carrinho/produto/111903081/adicionar",
+    image : "https://cdn.awsli.com.br/1000x1000/1984/1984900/produto/111903081/c9466ed4b8.jpg"
+});
+apx_widgets.worker.checkoutUpsell.list.push({
+    sku : "D8L4AHNAD", 
+    title : "Maravilhoso Jaleco por R$199,90",
+    subtitle : "Já está acabando, poucas unidades!",
+    confirmation : "Levar Também!",
+    addToCart: "https://alpix-battle-ground.lojaintegrada.com.br/carrinho/produto/119233478/adicionar",
+    image : "https://cdn.awsli.com.br/600x450/1984/1984900/produto/119233478/924b81b2c9.jpg"
+});
 apx_widgets.worker.checkoutUpsell.style = "<style>/* APX CHECKOUT UPSELL */.apx_widgets_worker-checkoutUpsell{display: grid; grid-auto-columns: calc(33.3% - 13px); gap: 20px; margin-bottom: 20px; grid-template-areas: 'a a a';}.apx_widgets_worker-checkoutUpsell-item{display: flex; align-items:center; gap: 15px; text-align: center; padding: 20px!important; border: 1px solid #f2f2f2; box-shadow: 0px 0px 20px rgb(0 0 0 / 5%); border-radius: 5px;}.apx_widgets_worker-checkoutUpsell-item .info{display:flex; flex-direction:column; gap:15px;}.apx_widgets_worker-checkoutUpsell-item img{height: auto; width: 100px; margin: 0 auto;}.apx_widgets_worker-checkoutUpsell-item strong{font-size:14px;}.apx_widgets_worker-checkoutUpsell-item small{font-size:12px;}.apx_widgets_worker-checkoutUpsell-item a{display: block; border-radius: 5px; background: #2ecc71; color: #fff; text-transform: uppercase; font-weight: bold; padding: 10px; text-decoration: none;}@media(max-width:990px){.apx_widgets_worker-checkoutUpsell{grid-auto-columns: 100%; gap: 10px; margin: -10px 0 10px 0; grid-template-areas: unset;}}</style>";
 apx_widgets.worker.checkoutUpsell.config = {};
 apx_widgets.worker.checkoutUpsell.match = $('.pagina-carrinho:not(.carrinho-checkout)').length > 0;
