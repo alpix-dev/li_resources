@@ -50,8 +50,8 @@ apx_widgets.worker.giftWrap.run = function(el){
             let sku = $(this).find('.produto-info > ul > li:first-child > span > strong').text().trim();
             let isChecked = apx_giftWrapItens !== null ? apx_giftWrapItens.trim().split("|").some(el => el === sku) : false;
             if(sku.includes('--hidden')){
-                //$(this).find('a, form').remove();
-                //$(this).hide();
+                $(this).find('a, form').remove();
+                $(this).hide();
             }else{
                 $(this).find('.produto-info > ul').append('<li class="apx_widgets_worker-giftWrap"><label><input type="checkbox" '+ (isChecked ? 'checked':'') +'/>'+ apx_widgets.worker.giftWrap.config.title +'</label><b class="apx_widgets_worker-giftWrap-price"></b>'+ (apx_widgets.worker.giftWrap.config.img !== undefined && apx_widgets.worker.giftWrap.config.img !== "" ? '<span class="apx_widgets_worker-giftWrap-example">?<div class="giftPopover"><img src="'+  apx_widgets.worker.giftWrap.config.img +'"/></div></span>' : '') + '</li>');
             }

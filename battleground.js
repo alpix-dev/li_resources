@@ -1,6 +1,6 @@
 apx_widgets.worker.giftWrap = {};
 apx_widgets.worker.giftWrap.list = [{}];
-apx_widgets.worker.giftWrap.style = "<style>/* APX CHECKOUT GIFT */.apx_widgets_worker-giftWrap{}</style>";
+apx_widgets.worker.giftWrap.style = '<style>/* APX CHECKOUT GIFT */.apx_widgets_worker-giftWrap{margin-top:15px!important;}.apx_widgets_worker-giftWrap-example{display: inline-block; background: #ccc; color: #fff; font-weight: bold; height: 16px; width: 16px; border-radius: 50%; text-align: center!important; margin-left: 5px; vertical-align: middle!important; font-size: 10px; line-height: 16px; position: relative;}.apx_widgets_worker-giftWrap-example .giftPopover:before{content: ""; border-bottom: 12px solid transparent; border-right: 12px solid #f2f2f2; border-top: 12px solid transparent; position: absolute; right: 100%; top: calc(50% - 12px);}.apx_widgets_worker-giftWrap-example .giftPopover:after{content: ""; border-bottom: 10px solid transparent; border-right: 10px solid #fff; border-top: 10px solid transparent; position: absolute; right: 100%; top: calc(50% - 10px);}.apx_widgets_worker-giftWrap-example:hover .giftPopover{opacity:1; transition:opacity .3s;}.apx_widgets_worker-giftWrap-example{cursor:pointer;}.apx_widgets_worker-giftWrap-example .giftPopover{position: absolute; left: 100%; margin-left: 15px; top: 50%; transform: translate(0, -50%); background: #fff; padding: 5px!important; border: 1px solid #f2f2f2; box-shadow: 0px 0px 20px rgb(0 0 0 / 5%); border-radius: 5px; font-size: 0; display: block; line-height: initial; opacity:0; pointer-events:none;}.apx_widgets_worker-giftWrap label{display: inline-block; align-items: center; gap: 5px; width: fit-content; margin-right: 5px; margin: 0;}.apx_widgets_worker-giftWrap label input{margin: -3px 5px 0 0; vertical-align: middle; vertical-align: middle!important;}</style>';
 apx_widgets.worker.giftWrap.config = {title:"<i class='icon-gift'></i> Para presente", img: "https://cdn.awsli.com.br/1984/1984900/arquivos/caixapresente.png", addToCart:"https://alpix-battle-ground.lojaintegrada.com.br/carrinho/produto/119664260/adicionar"};
 apx_widgets.worker.giftWrap.match = $('.pagina-carrinho').length > 0;
 apx_widgets.worker.giftWrap.run = function(el){
@@ -50,8 +50,8 @@ apx_widgets.worker.giftWrap.run = function(el){
             let sku = $(this).find('.produto-info > ul > li:first-child > span > strong').text().trim();
             let isChecked = apx_giftWrapItens !== null ? apx_giftWrapItens.trim().split("|").some(el => el === sku) : false;
             if(sku.includes('--hidden')){
-                //$(this).find('a, form').remove();
-                //$(this).hide();
+                $(this).find('a, form').remove();
+                $(this).hide();
             }else{
                 $(this).find('.produto-info > ul').append('<li class="apx_widgets_worker-giftWrap"><label><input type="checkbox" '+ (isChecked ? 'checked':'') +'/>'+ apx_widgets.worker.giftWrap.config.title +'</label><b class="apx_widgets_worker-giftWrap-price"></b>'+ (apx_widgets.worker.giftWrap.config.img !== undefined && apx_widgets.worker.giftWrap.config.img !== "" ? '<span class="apx_widgets_worker-giftWrap-example">?<div class="giftPopover"><img src="'+  apx_widgets.worker.giftWrap.config.img +'"/></div></span>' : '') + '</li>');
             }
