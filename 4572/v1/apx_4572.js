@@ -27,6 +27,7 @@ apx_widgets.worker.giftWrap.run = function(el){
 
         if(apx_giftWrapItens !== null){            
             let bushinMessage = $('[name="cliente_obs"]').clone().attr('name','bushin_obs');
+            $('[name="cliente_obs"]').hide();
             bushinMessage.insertBefore('[name="cliente_obs"]');
             $('[name="bushin_obs"]').change(function(){
                 $('[name="cliente_obs"]').val($(this).val() + "\n\nEmbalar para presente: " +  apx_giftWrapItens.replace('||','|').replaceAll('|', '\n'));
