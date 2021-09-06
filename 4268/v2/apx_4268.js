@@ -12,6 +12,11 @@ apx_widgets.worker.pixPaymentMethod.run = function(el){
                     $(k.target).closest('.li-box-payment').find('.forma-conteiner > img:nth-child(3)').remove();
                 }
             }
+            if($(k.target).closest('.accordion-toggle').length > 0){
+                if($(k.target).length > 0){
+                    $(k.target).closest('.accordion-toggle').find('img:last-child').remove();
+                }
+            }
             $(k.target).after('<div class="apx_widgets_worker-pixPaymentMethod" >' + apx_widgets.worker.pixPaymentMethod.config.icon + '</div>');
         }        
     });
