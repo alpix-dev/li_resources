@@ -60,7 +60,7 @@ window.addEventListener('load', function(event) {
 });
 
 function apx_related(){
-    $('[alt="Logomarca Loja Integrada"]').closest('a').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
-    $('a[title="Loja Integrada"]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');
-    $('a[title="Loja Integrada - Plataforma de loja virtual."]').attr('href','https://sua.lojaintegrada.com.br/7aGgMil_o');        
+    $('[alt="Logomarca Loja Integrada"]').closest('a').attr('href','https://www.alpix.dev/criar-sua-loja-integrada');
+    $('a[title="Loja Integrada"]').attr('href','https://www.alpix.dev/criar-sua-loja-integrada');
+    $('a[title="Loja Integrada - Plataforma de loja virtual."]').attr('href','https://www.alpix.dev/criar-sua-loja-integrada');        
 }
