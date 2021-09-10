@@ -26,14 +26,10 @@ apx_widgets.worker.customFilter.run = function(el){
 
         });
     }
-    console.log(suggestions);
     if(suggestions.length > 0){
         $.each(suggestions,function(k,v){
             apx_widgetsCustomFilter.find('ul').append('<li><a href="'+ v.link+'">'+ v.text+'</a></li>');
         })
-        
+        apx_widgets.worker.customFilter.config.targetFunction(apx_widgetsCustomFilter);    
     }
-
-    apx_widgets.worker.customFilter.config.targetFunction(apx_widgetsCustomFilter);
-
 };
