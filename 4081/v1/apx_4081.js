@@ -1,13 +1,13 @@
-theme.worker.checkoutExtraFields = {};
-theme.worker.checkoutExtraFields.list = [];
-//theme.worker.checkoutExtraFields.list.push({label : 'De:',id:'de',type: 'text',required : true});
-//theme.worker.checkoutExtraFields.list.push({label : 'Para:',id:'para',type: 'text',required : true});
-//theme.worker.checkoutExtraFields.list.push({label : 'Data:',id:'data',type: 'date',required : true});
-theme.worker.checkoutExtraFields.match = $('.pagina-carrinho.carrinho-checkout').length > 0;
-theme.worker.checkoutExtraFields.run = function(el){
+apx_widgets.worker.checkoutExtraFields = {};
+apx_widgets.worker.checkoutExtraFields.list = [];
+//apx_widgets.worker.checkoutExtraFields.list.push({label : 'De:',id:'de',type: 'text',required : true});
+//apx_widgets.worker.checkoutExtraFields.list.push({label : 'Para:',id:'para',type: 'text',required : true});
+//apx_widgets.worker.checkoutExtraFields.list.push({label : 'Data:',id:'data',type: 'date',required : true});
+apx_widgets.worker.checkoutExtraFields.match = $('.pagina-carrinho.carrinho-checkout').length > 0;
+apx_widgets.worker.checkoutExtraFields.run = function(el){
     $('#formularioObservacao').hide();    
     var themeCheckoutExtraFields = $('<div class="apx_widgets_worker-checkoutExtraFields"></div>');
-    $.each(theme.worker.checkoutExtraFields.list, function(k,item){
+    $.each(apx_widgets.worker.checkoutExtraFields.list, function(k,item){
         themeCheckoutExtraFields.append(apx_widgets.functions.createField(item));
     });
     themeCheckoutExtraFields.insertBefore('#formularioObservacao');
