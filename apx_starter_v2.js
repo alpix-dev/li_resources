@@ -49,6 +49,33 @@ apx_widgets.functions.blockPage = function (status){
     }   
 };
 
+apx_widgets.functions.createField = function (oObj){
+    let field = $('<div class="theme-customInputElement"></div>');    
+    field.append('<label>'+oObj.label+'</label>');
+    
+    if("text,number,password,tel,email,date,color".split(',').includes(oObj.type)){
+        field.append('<input type="'+ oObj.type +'" name="theme_field-'+ oObj.id +'"/>');
+    }
+    if(oObj.type == "textarea"){
+        field.append('<textarea rows="4" name="theme_field-'+ oObj.id +'"></textarea>');
+    }
+    if(oObj.type == "select"){
+        let select = $('<select name="theme_field-'+ oObj.id +'"></select>');
+        $.each(oObj.list, function(list_, list_value){
+            select.append('<option value="'+list_value+'">'+list_value+'</option>');
+        });
+        field.append(select);
+    }
+    if(oObj.type == "boolean"){
+        let select = $('<select name="theme_field-'+ oObj.id +'"></select>');
+        select.append('<option value="true">Sim</option>');
+        select.append('<option value="false">Não</option>');
+        field.append(select);
+    }
+    return field;
+
+};
+
 document.addEventListener("DOMContentLoaded", function() {apx_related();});
 window.addEventListener('load', function(event) {apx_related();});
 
