@@ -1,6 +1,6 @@
 apx_widgets.worker.customFilter = {};
 apx_widgets.worker.customFilter.list = [];
-apx_widgets.worker.customFilter.list.push({text: "Jaquetas",url:"/https://alpix-battle-ground.lojaintegrada.com.br/jaquetas-14955775", showOnPageURL : ""});
+//apx_widgets.worker.customFilter.list.push({text: "Jaquetas",url:"/https://alpix-battle-ground.lojaintegrada.com.br/jaquetas-14955775", showOnPageURL : ""});
 apx_widgets.worker.customFilter.style = "/* APX CUSTOM FILTER */.apx_widgets_worker-customFilter{}.apx_widgets_worker-customFilter ul{border:0!important; display: flex; gap: 10px; flex-wrap: wrap;}.apx_widgets_worker-customFilter ul > li{border: 1px solid #f2f2f2!important; box-sizing: border-box; padding: 5px 10px;}.apx_widgets_worker-customFilter ul > li > a{}";
 apx_widgets.worker.customFilter.config = {title: "Sugestões", active:true, smartSuggestion:true, targetFunction: function(oObj){oObj.insertAfter($('.coluna > div:nth-child(1)'));}};
 apx_widgets.worker.customFilter.match = $('.coluna .filtro-coluna').length > 0 && $('.listagem-item').length > 1 && apx_widgets.worker.customFilter.config.active;
