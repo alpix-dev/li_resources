@@ -28,6 +28,7 @@ apx_widgets.worker.customFilter.run = function(el){
                     }
                 }
             });
+            
 
         });
     }
