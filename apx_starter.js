@@ -3,20 +3,20 @@ apx_widgets.functions = [];
 apx_widgets.scripts = [];
 
 apx_widgets.scripts.Glide = function(){
-    if(typeof window.Glide === "undefined"){
-        let glideJS = document.createElement('script');
-        glideJS.src = "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js";
-        document.body.append(glideJS);
+    // if(typeof window.Glide === "undefined"){
+    //     let glideJS = document.createElement('script');
+    //     glideJS.src = "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js";
+    //     document.body.append(glideJS);
         
-        let glideCSS = document.createElement('link');
-        glideCSS.href = "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css";
-        glideCSS.rel  = 'stylesheet';
-        glideCSS.type = 'text/css';
-        glideCSS.media = 'all';
-        document.body.append(glideCSS);  
+    //     let glideCSS = document.createElement('link');
+    //     glideCSS.href = "https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.css";
+    //     glideCSS.rel  = 'stylesheet';
+    //     glideCSS.type = 'text/css';
+    //     glideCSS.media = 'all';
+    //     document.body.append(glideCSS);  
 
-        $('head').append('<style>/* GLIDE FIX */.glide__slides:after{display:none;}.glide__slides{margin:0;}</style>');
-    }
+    //     $('head').append('<style>/* GLIDE FIX */.glide__slides:after{display:none;}.glide__slides{margin:0;}</style>');
+    // }
 };
 
 apx_widgets.worker = {};
