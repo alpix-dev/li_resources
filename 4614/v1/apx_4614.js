@@ -19,12 +19,13 @@ apx_widgets.worker.customFilter.run = function(el){
         
         $('.listagem-item .nome-produto').each(function(){
             $.each($(this).text().split(' '), function(k,v){
-                try{
-                let find = suggestions.find(e => e.text.toLowerCase() == v.toLowerCase());
-                //console.log(find);
-                find == undefined  ? suggestions.push({text: v.toLowerCase(), link: '/buscar?q=' + v.toLowerCase()}) : '';
-                }catch(e){
-                    console.log('4614 - ' + e);
+                if(v.length > 2){
+                    try{
+                        let find = suggestions.find(e => e.text.toLowerCase() == v.toLowerCase());
+                        find == undefined  ? suggestions.push({text: v.toLowerCase(), link: '/buscar?q=' + v.toLowerCase()}) : '';
+                    }catch(e){
+                        console.log('4614 - ' + e);
+                    }
                 }
             });
 
