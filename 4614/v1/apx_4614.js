@@ -36,5 +36,6 @@ apx_widgets.worker.customFilter.run = function(el){
             apx_widgetsCustomFilter.find('ul').append('<li><a href="'+ v.link+'">'+ v.text+'</a></li>');
         })
         apx_widgets.worker.customFilter.config.targetFunction(apx_widgetsCustomFilter);    
+        console.log('apx_widgets.worker.customFilter OK');
     }
 };
