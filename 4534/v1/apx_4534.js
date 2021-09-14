@@ -1,7 +1,7 @@
 apx_widgets.worker.crossSelling = {};
 apx_widgets.worker.crossSelling.list = [];
 //apx_widgets.worker.crossSelling.list.push({sku : "D8L4AHNAD", products : ['https://alpix-battle-ground.lojaintegrada.com.br/g100snky3-camiseta-basica-feminina','https://alpix-battle-ground.lojaintegrada.com.br/jaqueta-couro-preta','https://alpix-battle-ground.lojaintegrada.com.br/produto-grade-atacado']});
-apx_widgets.worker.crossSelling.style = "<style>/* APX BUY TOGETHER */.apx_widgets_worker-crossSelling{display: flex; flex-direction: column; gap: 15px; margin: 30px 0; padding: 20px!important; border: 1px solid #f2f2f2; box-shadow: 0px 0px 20px rgb(0 0 0 / 5%); border-radius: 5px;}.apx_widgets_worker-crossSelling > strong{font-size: 16px; display: block; margin-bottom:15px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item{display: flex; gap: 20px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div label{}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div select{}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div span{}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div img{width:60px}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item-options{display: flex; align-items: center; gap: 5px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item-options > span{border: 1px solid #ccc; position: relative; border-radius: 2px; line-height: 30px; padding: 0 6px; min-width: 18px; text-align: center; cursor:pointer;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item-options > span.active{background: #000; color: #fff; border-color:#000;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item:not(:last-child){border-bottom: 1px solid #f2f2f2; padding-bottom: 15px;}.apx-gap-vertical-10{display:flex;flex-direction: column;gap:10px;}.apx_widgets_worker-crossSelling-item-options .indisponivel{pointer-events:none!important;}.apx_widgets_worker-crossSelling-item-options .indisponivel .icon-remove.hide{display:block!important;}@media(max-width:990px){.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div span{font-size:11px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div span{border-width: 0px 0px 20px 20px;}}</style>";
+apx_widgets.worker.crossSelling.style = "<style>/* APX BUY TOGETHER */.apx_widgets_worker-crossSelling-item > div:nth-child(2){cursor:pointer;}.apx_widgets_worker-crossSelling{display: flex; flex-direction: column; gap: 15px; margin: 30px 0; padding: 20px!important; border: 1px solid #f2f2f2; box-shadow: 0px 0px 20px rgb(0 0 0 / 5%); border-radius: 5px;}.apx_widgets_worker-crossSelling > strong{font-size: 16px; display: block; margin-bottom:15px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item{display: flex; gap: 20px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div label{}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div select{}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div span{}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div img{width:60px}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item-options{display: flex; align-items: center; gap: 5px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item-options > span{border: 1px solid #ccc; position: relative; border-radius: 2px; line-height: 30px; padding: 0 6px; min-width: 18px; text-align: center; cursor:pointer;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item-options > span.active{background: #000; color: #fff; border-color:#000;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item:not(:last-child){border-bottom: 1px solid #f2f2f2; padding-bottom: 15px;}.apx-gap-vertical-10{display:flex;flex-direction: column;gap:10px;}.apx_widgets_worker-crossSelling-item-options .indisponivel{pointer-events:none!important;}.apx_widgets_worker-crossSelling-item-options .indisponivel .icon-remove.hide{display:block!important;}@media(max-width:990px){.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div span{font-size:11px;}.apx_widgets_worker-crossSelling .apx_widgets_worker-crossSelling-item > div span{border-width: 0px 0px 20px 20px;}}</style>";
 apx_widgets.worker.crossSelling.config = {target: ".principal .acoes-produto", preload: true, title: "Aproveite e leve também", insertFunction: function(apx_widgetscrossSelling){if(apx_widgets.worker.crossSelling.config.preload == true){apx_widgetscrossSelling.appendTo($(apx_widgets.worker.crossSelling.config.target).first().prev('.apx_preload'));$(apx_widgets.worker.crossSelling.config.target).first().prev('.apx_preload').addClass('loaded')}else{apx_widgetscrossSelling.insertBefore($(apx_widgets.worker.crossSelling.config.target).first())}},};
 apx_widgets.worker.crossSelling.match = $('.pagina-produto').length > 0;
 apx_widgets.worker.crossSelling.run = function(el){
@@ -31,7 +31,7 @@ apx_widgets.functions.crossSellingGet = function (k, query_, apx_widgetscrossSel
         crossSellingProduct.append('<div><input type="checkbox"/></div>');
         crossSellingProduct.append('<div><img src="'+ img +'"/></div>');
         let crossSellingProductInfo = $('<div class="apx-gap-vertical-10"></div>');
-        crossSellingProductInfo.append('<label data-name>'+ name +'</label>');
+        crossSellingProductInfo.append('<label data-name><a href="'+query_[k]+'" target="_blank" style="text-decoration:none">'+ name +'</a></label>');
         if(hasVariant){                    
             let options = $('<div class="apx_widgets_worker-crossSelling-item-options"></div>');
             options.append(result.find('.atributos'));
@@ -106,7 +106,9 @@ apx_widgets.functions.crossSellingGet = function (k, query_, apx_widgetscrossSel
                 }
             });         
             
-            
+            $('.apx_widgets_worker-crossSelling-item > div:nth-child(2), .apx_widgets_worker-crossSelling-item > div:nth-child(3)').click(function(){
+                $(this).parent('.apx_widgets_worker-crossSelling-item').find('[type="checkbox"]').attr('checked',true).change();
+            })
             $('.principal .acoes-produto a').click(function(e){
                 e.preventDefault();                
                 let productsToAdd = [];
@@ -138,8 +140,7 @@ apx_widgets.functions.crossSellingGet = function (k, query_, apx_widgetscrossSel
     });
 };
 
-apx_widgets.functions.crossSellingAjax = function (i, calls, primary_product){
-    
+apx_widgets.functions.crossSellingAjax = function (i, calls, primary_product){    
     $.get(calls[i], function(data){
         
     })
