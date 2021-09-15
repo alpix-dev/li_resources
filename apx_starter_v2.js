@@ -36,6 +36,29 @@ apx_widgets.functions.blockPage = function (status){
     }   
 };
 
+apx_widgets.functions.hideThisSku = function(skuToHide){
+    if($('.principal [itemprop="sku"]').length > 0){
+        if($('.principal [itemprop="sku"]').text().indexOf(skuToHide) >= 0){
+            window.location = "/";
+        }
+    }
+    if($('.listagem-item').length > 0){
+        $('.listagem-item .produto-sku').each(function(){
+            if($(this).text().indexOf(skuToHide) >= 0){
+                $(this).closest('.listagem-item').remove();
+            }
+        })
+    }
+    if($('.carrinho-interno-ajax').length > 0){
+        $('.carrinho-interno-ajax .produto-sku').each(function(){
+            if($(this).text().indexOf(skuToHide) >= 0){
+                $(this).closest('li').remove();
+            }
+        })
+    }
+
+}
+
 apx_widgets.functions.createField = function (oObj){
     let field = $('<div class="theme-customInputElement"></div>');    
     field.append('<label>'+oObj.label+'</label>');
