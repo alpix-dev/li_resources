@@ -49,7 +49,6 @@
 }
 
 @media(max-width:990px){
-    /* .apx_widgets_worker-categorySlider .glide:not(.glide--carousel){margin: 0 -15px;width: calc(100% + 30px);} */
     .apx_widgets_worker-categorySlider .glide:not(.glide--carousel) .glide__arrows{
         display:none!important;
     }
