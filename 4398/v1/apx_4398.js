@@ -12,7 +12,7 @@ apx_widgets.worker.shelfLife.run = function(el){
             dataValidade = dataValidade.replace(apx_widgets.worker.shelfLife.config.prefixo,'');
             dataValidade = dataValidade.slice(0,2) + '/' + dataValidade.slice(2,4) + '/' + dataValidade.slice(4,8);
 
-            $('<label>Validade: '+ dataValidade+'</label>').prependTo($(this).find('div.comprar'));
+            $('<div class="apx_worker-shelfLife"><label>Validade: <span>'+ dataValidade+'</span><label></div>').prependTo($(this).find('div.comprar'));
         }
     })
     console.log('apx_widgets.worker.shelfLife OK');
