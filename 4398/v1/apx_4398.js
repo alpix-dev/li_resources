@@ -17,3 +17,4 @@ apx_widgets.worker.shelfLife.run = function(el){
     })
     console.log('apx_widgets.worker.shelfLife OK');
 };
+
