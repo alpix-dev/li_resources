@@ -26,7 +26,9 @@ apx_widgets.worker.giftWrap.run = function(el){
             if(sku.includes('--hidden')){
                 $(this).hide();
                 giftBoxPrice = Number($(this).find('.preco-promocional.titulo').text().replace(',','.').replace(/[^0-9.-]+/g,""));
+                console.log(giftBoxPrice);
                 giftBoxPrice = giftBoxPrice / parseInt($(this).find('[data-produto-quantidade]').data('produto-quantidade'));
+                console.log(giftBoxPrice);
 
             }
             if(isChecked){
@@ -70,7 +72,7 @@ apx_widgets.worker.giftWrap.run = function(el){
             }else{
                 $(this).find('.produto-info > ul').append('<li class="apx_widgets_worker-giftWrap"><label><input type="checkbox" '+ (isChecked ? 'checked':'') +'/>'+ apx_widgets.worker.giftWrap.config.title +'</label><b class="apx_widgets_worker-giftWrap-price"></b>'+ (apx_widgets.worker.giftWrap.config.img !== undefined && apx_widgets.worker.giftWrap.config.img !== "" ? '<span class="apx_widgets_worker-giftWrap-example">?<div class="giftPopover"><img src="'+  apx_widgets.worker.giftWrap.config.img +'"/></div></span>' : '') + '</li>');
             }
-            console.log(k);
+            //console.log(k);
             if($('tr[data-produto-id]').length == k+1){
                 $('.apx_widgets_worker-giftWrap input:checked').closest('tr').find('.icon-plus,.icon-minus,.icon-trash').click(function(e){
                     let itemId = apx_widgets.worker.giftWrap.config.addToCart.split('/')[5];
@@ -111,8 +113,10 @@ apx_widgets.worker.giftWrap.run = function(el){
                 });
                 let itemId = apx_widgets.worker.giftWrap.config.addToCart.split('/')[5];
                 if($('tr[data-produto-id="'+itemId+'"]').length > 0){
-                    let giftBoxPrice = $('tr[data-produto-id="'+itemId+'"] .preco-produto .titulo').text();
+                    let giftBoxPrice = $('tr[data-produto-id="'+itemId+'"] td:nth-child(3) .preco-produto .titulo').text().trim();
+                    //console.log(giftBoxPrice);
                     giftBoxPrice = Number(giftBoxPrice.replace(',','.').replace(/[^0-9.-]+/g,""));
+                    //console.log(giftBoxPrice);
                     
                     
                     $('.apx_widgets_worker-giftWrap input:checked').each(function(){
