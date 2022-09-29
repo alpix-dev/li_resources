@@ -113,5 +113,5 @@ window.addEventListener('load', function(event) {apx_related();});
 //    //:YYY~       ^JYYY7       :!J5PGGGPY?~.          :JYYYY~      ~YYYYJ.         .YGGY: 
 
 function apx_related(){
-    $('a[title="Loja Integrada - Plataforma de loja virtual."]').attr('href','https://www.alpix.dev/criar-sua-loja-integrada');            
+    $('a[href^="https://www.lojaintegrada.com.br/?utm_source=lojas"]').attr('href','https://www.alpix.dev/criar-sua-loja-integrada');                
 }
