@@ -113,5 +113,14 @@ window.addEventListener('load', function(event) {apx_related();});
 //    //:YYY~       ^JYYY7       :!J5PGGGPY?~.          :JYYYY~      ~YYYYJ.         .YGGY: 
 
 function apx_related(){
-    $('a[href^="https://www.lojaintegrada.com.br/?utm_source=lojas"]').attr('href','https://www.alpix.dev/criar-sua-loja-integrada');                
+    $('#rodape a').click(function(e){
+        e.preventDefault();
+        let url = $(this).attr('href');
+        if (url.includes('lojaintegrada') || url.includes('loja-integrada')){
+            window.open('https://www.alpix.dev/criar-sua-loja-integrada', '_blank');        
+        }else{
+            window.location.href = url;
+        }
+    });
+    //$('a[href^="https://www.lojaintegrada.com.br/?utm_source=lojas"]').attr('href','https://www.alpix.dev/criar-sua-loja-integrada');                
 }
